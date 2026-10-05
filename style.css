@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1b1f2a;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #4169e1;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #4169e1;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background: linear-gradient(135deg, #eef3ff, #ffffff);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #4169e1;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #666;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #4169e1;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(65, 105, 225, 0.3);
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.photo-container {
+    width: 320px;
+    height: 400px;
+    padding: 10px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    transform: rotate(3deg);
+    flex-shrink: 0;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title p {
+    color: #4169e1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   DATA DIRI
+========================= */
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.data-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #4169e1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.data-card span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.data-card strong {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   ACTIVITY
+========================= */
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.activity-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-7px);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CITA-CITA
+========================= */
+
+.dream-section {
+    background: #151a2e;
+    color: white;
+    max-width: none;
+    padding: 70px max(30px, calc((100% - 1040px) / 2));
+}
+
+.dream-section .section-title p {
+    color: #8ea5ff;
+}
+
+.dream-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.dream-icon {
+    font-size: 80px;
+    flex-shrink: 0;
+}
+
+.dream-content h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.dream-content p {
+    color: #c7cada;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   JARINGAN KOMPUTER
+========================= */
+
+.jarkom-content {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    align-items: center;
+}
+
+.network-visual {
+    background: linear-gradient(135deg, #4169e1, #263d91);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.network-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.network-visual h3 {
+    font-size: 25px;
+}
+
+.network-text {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.network-text p {
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skills span {
+    background: #eef3ff;
+    color: #4169e1;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    background: #111522;
+    color: white;
+    padding: 50px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 70px 6%;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jarkom-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 16px 20px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 60px 20px;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .photo-container {
+        width: 210px;
+        height: 270px;
+    }
+
+    .section {
+        width: 100%;
+        margin: 55px auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .about-content {
+        padding: 22px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .data-card {
+        padding: 20px;
+    }
+
+    .data-card strong {
+        font-size: 16px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .activity-card {
+        padding: 25px;
+    }
+
+    .dream-section {
+        padding: 55px 20px;
+    }
+
+    .dream-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .dream-icon {
+        font-size: 60px;
+    }
+
+    .dream-content h3 {
+        font-size: 25px;
+    }
+
+    .dream-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .jarkom-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .network-visual {
+        padding: 35px 20px;
+    }
+
+    .network-icon {
+        font-size: 55px;
+    }
+
+    .network-visual h3 {
+        font-size: 22px;
+    }
+
+    .network-text {
+        padding: 25px;
+    }
+
+    .network-text p {
+        font-size: 14px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        font-size: 12px;
+        padding: 6px 11px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
